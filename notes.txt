@@ -1,0 +1,9 @@
+CREATE DATABASE djangoims CHARACTER SET utf8mb4;
+SET GLOBAL validate_password_length = 7;
+SET GLOBAL validate_password_number_count = 0;
+
+SET GLOBAL validate_password_policy=LOW;
+CREATE USER djangoims@localhost IDENTIFIED BY 'djangoims';
+
+GRANT ALL PRIVILEGES ON djangoims.* TO djangoims@localhost;
+FLUSH PRIVILEGES;
